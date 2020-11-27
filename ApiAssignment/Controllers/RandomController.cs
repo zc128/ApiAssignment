@@ -9,7 +9,7 @@ namespace ApiAssignment.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class random : ControllerBase
+    public class random: ControllerBase
     {
         [HttpGet]
         public int Get() {
