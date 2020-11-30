@@ -47,21 +47,16 @@ namespace ApiAssignment.Controllers
         [HttpOptions]
         public dynamic Options()
         {
-            Random rando = new Random();
-            double flt = rando.NextDouble();
-            int shift = Convert.ToInt32(Math.Floor(25 * flt));
-            char letter = Convert.ToChar(shift + 65);
             Response.ContentType = "application/json";
 
             var json = new
             {
-                HttpGet = rando.Next(1, 10000),
-                HttpPost = rando.NextDouble(),
-                HttpPut = "Thank you for the new number!",
-                HttpDelete = letter,
-                HttpPatch = DateTime.Now
-            };
-
+                HttpGet = "Return a random integer",
+                HttpPost = "Return a random double",
+                HttpPut = "Return message: Thank you for the new number!",
+                HttpDelete = "Return a random character",
+                HttpPatch = "Return a string that gives the current date",
+        };
             return json;
         }
 
